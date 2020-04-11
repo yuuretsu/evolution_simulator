@@ -1,0 +1,19 @@
+#sim {
+   /*max-width: 100%;*/
+   display: block;
+   margin: 0 auto;
+   margin-top: 15px;
+   box-shadow: 0 0 50px rgba(0,0,0,1);
+   top: 20px;
+   border-radius: 10px;
+   /*cursor: none;*/
+}
+
+#sim2 {
+	position: absolute 0;
+	background-color: rgb(50, 50, 50);
+}
+
+body {
+   background-color: rgb(100, 100, 100);
+}
