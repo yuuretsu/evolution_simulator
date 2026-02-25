@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Evolution simulator</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="module" crossorigin src="./assets/index-UVls1McG.js"></script>
+		<link rel="modulepreload" crossorigin href="./assets/pix-DWMqlGUd.js">
+		<link rel="stylesheet" crossorigin href="./assets/index-B1h_sggH.css">
+	</head>
+	<body>
+		<div class='main'>
+			<div id="sim-scroll" class="sim-scroll">
+				<canvas id="sim" class="sim"></canvas>
+			</div>
+			<div class="camera-indicator-container">
+				<div id="camera-indicator" class="camera-indicator">
+					<div id="camera-thumb" class="camera-thumb"></div>
+				</div>
+			</div>
+		<div class="controls">
+			<button id="pause-btn" class="pause-btn" type="button" aria-label="Пауза">
+				<svg class="icon icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M320-200v-560l440 280-440 280Z"/></svg>
+				<svg class="icon icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M560-200v-560h160v560H560Zm-320 0v-560h160v560H240Z"/></svg>
+			</button>
+			<div class="speed-control">
+				<div class="speed-header">
+					<label for="speed-slider">Скорость</label>
+					<span id="speed-label" class="speed-value">x1.0</span>
+				</div>
+				<input id="speed-slider" class="speed-slider" type="range" min="0" max="8" step="1" value="8" />
+			</div>
+			<div class="stats">
+				<div class="stat"><span class="stat-label">UPS</span><span id="ups-value" class="stat-value">0</span></div>
+				<div class="stat"><span class="stat-label">Живые</span><span id="live-count" class="stat-value">0</span></div>
+				<div class="stat"><span class="stat-label">Трупы</span><span id="dead-count" class="stat-value">0</span></div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
