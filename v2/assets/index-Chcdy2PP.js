@@ -376,11 +376,13 @@ SIM.cycle = 0;
 SIM.maxFastSliceMs = 14;
 SIM.maxFastStepsPerFrame = 2e4;
 const upsValueEl = document.getElementById("ups-value");
+const worldAgeEl = document.getElementById("world-age");
 const liveCountEl = document.getElementById("live-count");
 const deadCountEl = document.getElementById("dead-count");
 const speedSliderEl = document.getElementById("speed-slider");
 const speedLabelEl = document.getElementById("speed-label");
 const pauseBtnEl = document.getElementById("pause-btn");
+const ruNumberFormat = new Intl.NumberFormat("ru-RU");
 function updateSpeedLabel() {
   if (SIM.fullSpeed) {
     speedLabelEl.textContent = "без огр.";
@@ -412,8 +414,9 @@ pauseBtnEl.addEventListener("click", () => {
 });
 applySpeedLevel(Number(speedSliderEl.value));
 updatePauseButton();
-liveCountEl.textContent = String(SIM.amountOfBots);
-deadCountEl.textContent = String(SIM.amountOfDeadBots);
+worldAgeEl.textContent = ruNumberFormat.format(SIM.cycle);
+liveCountEl.textContent = ruNumberFormat.format(SIM.amountOfBots);
+deadCountEl.textContent = ruNumberFormat.format(SIM.amountOfDeadBots);
 function stepSimulation() {
   SIM.nextBots.length = 0;
   shuffleInPlace(SIM.bots);
@@ -454,8 +457,9 @@ PIX.loop(function() {
     SIM.ups = Math.round(SIM.updatesInWindow * 1e3 / (frameStart - SIM.lastUpsUpdate));
     SIM.updatesInWindow = 0;
     SIM.lastUpsUpdate = frameStart;
-    upsValueEl.textContent = String(SIM.ups);
-    liveCountEl.textContent = String(SIM.amountOfBots);
-    deadCountEl.textContent = String(SIM.amountOfDeadBots);
+    upsValueEl.textContent = ruNumberFormat.format(SIM.ups);
+    worldAgeEl.textContent = ruNumberFormat.format(SIM.cycle);
+    liveCountEl.textContent = ruNumberFormat.format(SIM.amountOfBots);
+    deadCountEl.textContent = ruNumberFormat.format(SIM.amountOfDeadBots);
   }
 });
