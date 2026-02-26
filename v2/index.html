@@ -1,27 +1,49 @@
+<!--
+Copyright (C) 2026 Юрий Морозов (yurafrozen@gmail.com)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, version 3.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License 
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Evolution simulator</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script type="module" crossorigin src="./assets/index-Chcdy2PP.js"></script>
-		<link rel="modulepreload" crossorigin href="./assets/pix-DWMqlGUd.js">
-		<link rel="stylesheet" crossorigin href="./assets/index-B1h_sggH.css">
-	</head>
-	<body>
-		<div class='main'>
-			<div id="sim-scroll" class="sim-scroll">
-				<canvas id="sim" class="sim"></canvas>
+
+<head>
+	<title>Evolution simulator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" crossorigin src="./assets/index-BQvtJPoE.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/pix-DUQ-AW49.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-CJ_Wunf9.css">
+</head>
+
+<body>
+	<div class='main'>
+		<div id="sim-scroll" class="sim-scroll">
+			<canvas id="sim" class="sim"></canvas>
+		</div>
+		<div class="camera-indicator-container">
+			<div id="camera-indicator" class="camera-indicator">
+				<div id="camera-thumb" class="camera-thumb"></div>
 			</div>
-			<div class="camera-indicator-container">
-				<div id="camera-indicator" class="camera-indicator">
-					<div id="camera-thumb" class="camera-thumb"></div>
-				</div>
-			</div>
+		</div>
 		<div class="controls">
 			<button id="pause-btn" class="pause-btn" type="button" aria-label="Пауза">
-				<svg class="icon icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M320-200v-560l440 280-440 280Z"/></svg>
-				<svg class="icon icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M560-200v-560h160v560H560Zm-320 0v-560h160v560H240Z"/></svg>
+				<svg class="icon icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+					<path d="M320-200v-560l440 280-440 280Z" />
+				</svg>
+				<svg class="icon icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+					<path d="M560-200v-560h160v560H560Zm-320 0v-560h160v560H240Z" />
+				</svg>
 			</button>
 			<div class="speed-control">
 				<div class="speed-header">
@@ -37,6 +59,7 @@
 				<div class="stat"><span class="stat-label">Трупы</span><span id="dead-count" class="stat-value">0</span></div>
 			</div>
 		</div>
-		</div>
-	</body>
+	</div>
+</body>
+
 </html>
